@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      }
+
+      .btn {
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 15px rgba(255, 65, 108, 0.5);
+      }
+
+      .btn:hover {
+        background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(255, 65, 108, 0.7);
+      }
+
+      .btn:active {
+        transform: scale(0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn" onclick="window.location.href='UserInputForm.html'">
+      Go To User Input Form
+    </button>
+  </body>
+</html>
