@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Duval Triangle Visualization</title>
+    <link rel="stylesheet" href="DuvalTriangleVisulaization.css" />
+  </head>
+  <body>
+    <!--Duval Triangle Visualization Section-->
+    <div id="DuvalTriangleVisualization">
+      <h1>Duval Triangle Visualization</h1>
+      <canvas id="duvalCanvas" width="900" height="750"></canvas>
+    </div>
+
+    <!--ZOne Information + Diagnostic Result + User Input Section with Button-->
+    <div id="Zone-Information-Diagnostic-Result-User-input">
+      <!-- You can add additional content or UI elements here as needed -->
+
+      <!--Zone Information Section-->
+      <div id="Zone-Information-Section">
+        <div class="zone" id="zone-D1">
+          <div class="zone-row">
+            <div class="zone-part zone-partD1"></div>
+            <div class="zone-part zone-part2">D1</div>
+            <div class="zone-part zone-part3">Discharge of Low Energy</div>
+          </div>
+        </div>
+        <div class="zone" id="zone-D2">
+          <div class="zone-row">
+            <div class="zone-part zone-partD2"></div>
+            <div class="zone-part zone-part2">D2</div>
+            <div class="zone-part zone-part3">Discharge of Energy</div>
+          </div>
+        </div>
+        <div class="zone" id="zone-DT">
+          <div class="zone-row">
+            <div class="zone-part zone-partDT"></div>
+            <div class="zone-part zone-part2">DT</div>
+            <div class="zone-part zone-part3">
+              Electrical &amp; Thermal Fault
+            </div>
+          </div>
+        </div>
+        <div class="zone" id="zone-T1">
+          <div class="zone-row">
+            <div class="zone-part zone-partT1"></div>
+            <div class="zone-part zone-part2">T1</div>
+            <div class="zone-part zone-part3">Thermal Fault: T ≤ 300 °C</div>
+          </div>
+        </div>
+        <div class="zone" id="zone-T2">
+          <div class="zone-row">
+            <div class="zone-part zone-partT2"></div>
+            <div class="zone-part zone-part2">T2</div>
+            <div class="zone-part zone-part3">
+              Thermal Fault: 300 °C &lt; T ≤ 700 °C
+            </div>
+          </div>
+        </div>
+        <div class="zone" id="zone-T3">
+          <div class="zone-row">
+            <div class="zone-part zone-partT3"></div>
+            <div class="zone-part zone-part2">T3</div>
+            <div class="zone-part zone-part3">Thermal Fault: T ≥ 700 °C</div>
+          </div>
+        </div>
+        <div class="zone" id="zone-PD">
+          <div class="zone-row">
+            <div class="zone-part zone-partPD"></div>
+            <div class="zone-part zone-part2">PD</div>
+            <div class="zone-part zone-part3">Partial Discharge</div>
+          </div>
+        </div>
+      </div>
+
+      <!--Diagnostic Result Sction-->
+      <div id="Diagnostic-Result-Section">
+        <div class="diagnostic-row" id="Diagnostic-Result-label">
+          Diagnostic Result:
+        </div>
+        <div class="diagnostic-row" id="Diagnostic-result">
+          <div class="zone-partfaultzonecolor"></div>
+          <div class="zone-part2faultzoneshortdesc"></div>
+          <div class="zone-part3faultzonelongdesc"></div>
+        </div>
+      </div>
+
+      <!--User Input Data Section-->
+      <div id="User-Input-Section">
+        <!--Row 2 :: Label-->
+        <div class="user-input-row" id="user-input-row-content-row2">
+          User Input Data:
+        </div>
+
+        <!--Row 4 ::Table -->
+        <div id="user-input-row-content-row4" class="user-input-row">
+          <!-- Row 1: Header Labels -->
+          <div class="grid-cell" id="cell-11">Gas</div>
+          <div class="grid-cell" id="cell-12">PPM</div>
+          <div class="grid-cell" id="cell-13">%</div>
+          <div class="grid-cell" id="cell-14">X-Coordinate</div>
+          <div class="grid-cell" id="cell-15">Y-Coordinate</div>
+
+          <!-- Row 2 -->
+          <div class="grid-cell" id="cell-21">Methane(CH<sub>4</sub>)</div>
+          <div class="grid-cell" id="cell-22">
+            <div class="grid-cell">
+              <input
+                type="text"
+                class="ppm-input"
+                id="ppm-input-P1"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="grid-cell" id="cell-23"></div>
+          <div class="grid-cell merged-cell" id="cell-24" rowspan="3"></div>
+          <div class="grid-cell merged-cell" id="cell-25" rowspan="3"></div>
+
+          <!-- Row 3 -->
+          <div class="grid-cell" id="cell-31">
+            Ethylene(C<sub>2</sub>H<sub>4</sub>)
+          </div>
+          <div class="grid-cell" id="cell-32">
+            <div class="grid-cell">
+              <input
+                type="text"
+                class="ppm-input"
+                id="ppm-input-P2"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="grid-cell" id="cell-33"></div>
+          <div class="grid-cell merged-cell" id="cell-34" rowspan="3"></div>
+          <div class="grid-cell merged-cell" id="cell-35" rowspan="3"></div>
+
+          <!-- Row 4 -->
+          <div class="grid-cell" id="cell-41">
+            Acetylene(C<sub>2</sub>H<sub>2</sub>)
+          </div>
+          <div class="grid-cell" id="cell-42">
+            <div class="grid-cell">
+              <input
+                type="text"
+                class="ppm-input"
+                id="ppm-input-P3"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="grid-cell" id="cell-43"></div>
+          <div class="grid-cell merged-cell" id="cell-44" rowspan="3"></div>
+          <div class="grid-cell merged-cell" id="cell-45" rowspan="3"></div>
+        </div>
+
+        <!-- Row 6:: Button -->
+        <div class="user-input-row" id="user-input-row-content-row6">
+          <button id="btn-submit" class="action-button">View Diagnostic</button>
+
+          <button id="btn-clear" class="action-button">Clear</button>
+
+          <button id="btn-add-new-entry" class="action-button">
+            Add New Entry
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Modal Appearnce when Submit ,Clear and Add New Entry is click-->
+    <!-- First Modal: Clear Confirmation -->
+    <div id="clearModal-clear-duval" class="modal-clear-duval">
+      <div class="modal-content-clear-duval">
+        <span class="modal-icon-clear-duval">⚠️</span>
+        <h2>Confirm Action</h2>
+        <p>Do you want to clear the data?</p>
+        <div class="modal-buttons-clear-duval">
+          <button id="modalYes-clear-duval" class="btn-confirm-clear-duval">
+            Yes
+          </button>
+          <button id="modalNo-clear-duval" class="btn-cancel-clear-duval">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Modal: Success Confirmation -->
+    <div id="clearModal-clear-Duval-Success" class="modal-clear-Duval-Success">
+      <div class="modal-content-clear-Duval-Success">
+        <span class="modal-icon-clear-Duval-Success">✅</span>
+        <h2>Success</h2>
+        <p>Data has been successfully cleared!</p>
+        <p>Do you want to enter new data?</p>
+        <div class="modal-buttons-clear-Duval-Success">
+          <button
+            id="modalYes-clear-Duval-Success"
+            class="btn-confirm-clear-Duval-Success"
+          >
+            Yes
+          </button>
+          <button
+            id="modalNo-clear-Duval-Success"
+            class="btn-cancel-clear-Duval-Success"
+          >
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Structure for view Diagnostic when clicked -->
+    <div
+      id="submitModal-viewDiagnostic-Modal"
+      class="modal-viewDiagnostic-Modal"
+    >
+      <div class="modal-content-viewDiagnostic-Modal">
+        <h2 class="modal-title-viewDiagnostic-Modal">Confirmation</h2>
+        <p class="modal-text-viewDiagnostic-Modal">
+          Do you want to keep the visualization of old input?
+        </p>
+        <div class="modal-buttons-viewDiagnostic-Modal">
+          <button
+            id="modalYes-viewDiagnostic-Modal"
+            class="modal-button-viewDiagnostic-Modal yes-button-viewDiagnostic-Modal"
+          >
+            Yes
+          </button>
+          <button
+            id="modalNo-viewDiagnostic-Modal"
+            class="modal-button-viewDiagnostic-Modal no-button-viewDiagnostic-Modal"
+          >
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="DuvalTriangleVisualization.js"></script>
+  </body>
+</html>

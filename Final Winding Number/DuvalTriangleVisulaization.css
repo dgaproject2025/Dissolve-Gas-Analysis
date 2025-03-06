@@ -1,0 +1,731 @@
+/* Remove default margins so our container fills the viewport */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  background-color: #efe9e9;
+}
+
+/* Container: positioned at the top-left; height = 100% of body; width = 60% of body */
+#DuvalTriangleVisualization {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60%;
+}
+
+/* h1 styling remains unchanged */
+#DuvalTriangleVisualization h1 {
+  text-align: center;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 95%;
+  height: 5%;
+  margin-top: 10px;
+  font-size: 25px;
+  padding: 10px;
+  background-color: bisque;
+}
+
+/* Canvas styling remains unchanged */
+#DuvalTriangleVisualization canvas {
+  width: 98%;
+  height: 88%;
+  border: 1px solid #ccc;
+  margin-top: 2px;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: antiquewhite;
+}
+
+/* New Section: Zone Information Diagnostic Result User Input */
+#Zone-Information-Diagnostic-Result-User-input {
+  position: absolute;
+  top: 0;
+  /* Place it just to the right of DuvalTriangleVisualization:
+       left position = left margin of DuvalTriangleVisualization + its width */
+  left: 60%;
+  /* Its width equals the body width minus DuvalTriangleVisualization width and minus 2*left margin (i.e. 40px) */
+  width: 40%;
+  height: 100%;
+  background-color: lightblue; /* Chosen color for clear identification */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Child Sections within Zone-Information-Diagnostic-Result-User-input */
+
+/* Zone-Information-Section design */
+
+/* Zone-Information-Section inside Zone-Information-Diagnostic-Result-User-input */
+#Zone-Information-Section {
+  /* Equal left, top, and right margins */
+  margin: 10px 20px 10px 10px;
+  width: calc(100% - 40px); /* parent's width minus left+right margins */
+  height: calc(50% - 40px); /* 50% of parent's height minus 2×20px */
+  background-color: whitesmoke; /* light green */
+  border: 2px solid #008000;
+  padding: 10px;
+  /* Use CSS grid to divide vertical space into 15 equal rows */
+  display: grid;
+  /*grid-template-rows: repeat(15, 1fr);*/
+  grid-template-rows: 1fr 9fr 1fr 9fr 1fr 9fr 1fr 9fr 1fr 9fr 1fr 9fr 1fr 9fr 1fr;
+}
+
+/* Place the 7 zone boxes in grid rows 2,4,6,8,10,12,14, leaving rows 1,3,5,7,9,11,13,15 as gaps */
+#zone-D1 {
+  grid-row: 2;
+}
+#zone-D2 {
+  grid-row: 4;
+}
+#zone-DT {
+  grid-row: 6;
+}
+#zone-T1 {
+  grid-row: 8;
+}
+#zone-T2 {
+  grid-row: 10;
+}
+#zone-T3 {
+  grid-row: 12;
+}
+#zone-PD {
+  grid-row: 14;
+}
+
+/* Each zone box occupies its full grid cell (100% width) */
+#Zone-Information-Section .zone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f0ebeb;
+  background-color: #e0ffe0;
+  font-size: 16px;
+}
+
+/* Note:
+     With grid-template-rows: repeat(15, 1fr), each row gets an equal share.
+     Here the gap rows (rows 1,3,5,7,9,11,13,15) will each be 1/15 of the container’s height,
+     and the child rows (rows 2,4,6,8,10,12,14) will also be 1/15 of the container’s height.
+     To ensure that each child's height is higher than the gap,
+     you may adjust the row heights using fractional units.
+     For example, if you want each child to be 3 times as tall as a gap, you could define:
+       grid-template-rows: repeat(7, 3fr)  repeat(8, 1fr);
+     However, that would yield 15 rows in total but then you must assign each zone to the appropriate row.
+     Here, to keep it simple, we use equal rows (1fr each) as a starting point.
+     You can adjust the ratio as needed by modifying the grid-template-rows value.
+  */
+
+/* Container for the three child elements in each zone cell */
+.zone-row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+/* Base styling for each part */
+.zone-part {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /*justify-content: left;*/
+  align-items: center;
+}
+
+/* First child: 20% width, specific fill color, bold and centered text */
+.zone-partD1 {
+  width: 30%;
+  background-color: rgb(104, 255, 255);
+  font-weight: bold;
+  text-align: center;
+  border-color: rgb(104, 255, 255);
+}
+
+.zone-partD2 {
+  width: 30%;
+  background-color: rgb(51, 100, 240);
+  font-weight: bold;
+  text-align: center;
+}
+
+.zone-partDT {
+  width: 30%;
+  background-color: rgb(200, 60, 200);
+  font-weight: bold;
+  text-align: center;
+}
+
+.zone-partT1 {
+  width: 30%;
+  background-color: rgb(255, 153, 153);
+  font-weight: bold;
+  text-align: center;
+}
+
+.zone-partT2 {
+  width: 30%;
+  background-color: rgb(255, 204, 0);
+  font-weight: bold;
+  text-align: center;
+}
+
+.zone-partT3 {
+  width: 30%;
+  background-color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: center;
+}
+
+.zone-partPD {
+  width: 30%;
+  background-color: rgb(255, 0, 0);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Second child: 20% width, currently placeholder styling */
+.zone-part2 {
+  width: 15%;
+  text-align: center;
+  font-weight: bolder;
+  margin-left: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+/* Third child: 60% width with centered text */
+.zone-part3 {
+  width: 75%;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Diagnostic-Result-Section design */
+#Diagnostic-Result-Section {
+  margin: 0px 10px 0px 10px; /* equal left, top, and right margins */
+  width: calc(
+    100% - 20px
+  ); /* parent's width minus left and right margins (20px each) */
+  height: calc(
+    15% - 20px
+  ); /* 50% of parent's height minus 2 * top margin (20px each) */
+  background-color: whitesmoke; /* light green */
+  border: 1px solid #008000; /* green border */
+
+  display: grid;
+  /*grid-template-rows: repeat(15, 1fr);*/
+  grid-template-rows: 7fr 15fr 3fr 30fr 7fr;
+}
+
+#Diagnostic-Result-label {
+  grid-row: 2;
+}
+#Diagnostic-result {
+  grid-row: 4;
+}
+
+/* Each diagnostic row */
+.diagnostic-row {
+  /* Equal left & right margins for each row */
+  margin-left: 10px;
+  margin-right: 10px;
+  /* Ensure the row's width is parent's width minus these margins */
+  width: calc(100% - 20px);
+
+  /* Let the grid determine the height (each row is 1/5 of the parent's height) */
+  border: 1px solid #f0ebeb; /* For visual identification – adjust as needed */
+  /*box-sizing: border-box;*/
+}
+
+#Diagnostic-Result-label {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bolder;
+  background-color: antiquewhite;
+}
+
+#Diagnostic-result {
+  display: flex;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+  flex-direction: row;
+  background-color: #d0f0c0; /* light green for identification */
+}
+
+.zone-partfaultzonecolor {
+  width: 30%;
+  /*background-color: variable based on the diagnostic result;*/
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Second child: 20% width, currently placeholder styling */
+.zone-part2faultzoneshortdesc {
+  width: 15%;
+  display: flex;
+  text-align: left;
+  font-weight: bolder;
+  padding-left: 15px;
+  align-items: center;
+  background-color: #e0ffe0;
+  justify-content: left;
+}
+
+/* Third child: 60% width with centered text */
+.zone-part3faultzonelongdesc {
+  width: 75%;
+  text-align: left;
+  font-weight: bold;
+  background-color: #e0ffe0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: -10px;
+}
+
+/* User-Input-Section design */
+#User-Input-Section {
+  margin: 10px 10px 10px 10px; /* equal left, top, and right margins */
+  width: calc(
+    100% - 20px
+  ); /* parent's width minus left and right margins (20px each) */
+  height: calc(
+    35% - 5px
+  ); /* 50% of parent's height minus 2 * top margin (20px each) */
+  background-color: lightcyan; /* light green */
+  border: 1px solid #008000; /* green border */
+  display: grid;
+  grid-template-rows: 1fr 3fr 0.5fr 15fr 0.5fr 3fr 1fr;
+  position: relative;
+}
+
+#user-input-row-content-row2 {
+  grid-row: 2;
+}
+#user-input-row-content-row4 {
+  grid-row: 4;
+}
+#user-input-row-content-row6 {
+  grid-row: 6;
+}
+
+/* All rows: ensure equal left and right margins */
+.user-input-row {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#user-input-row-content-row2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  border: 1px solid #f0ebeb;
+  border-radius: 2px;
+  font-weight: bold;
+}
+/* Container for the grid in row 4 of the User-Input Section */
+/* Ensure the container has a fixed height so the grid is visible.
+   Adjust height as needed; here we use 300px for demonstration. */
+#user-input-row-content-row4 {
+  margin-left: 10px;
+  margin-right: 10px;
+  /* Ensure the row occupies full available width (parent width minus margins) */
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+  grid-template-rows: repeat(4, 1fr); /* 4 equal rows */
+  gap: 1px; /* 1px gap between cells */
+  background-color: #f0ebeb;
+  border-left: 1px solid #f0ebeb;
+  border-right: 1px solid #f0ebeb;
+  border-top: 1px solid #f0ebeb;
+}
+
+/* Basic styling for each grid cell */
+#user-input-row-content-row4 .grid-cell {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+/* Explicitly assign each cell to a row and column */
+#cell-11 {
+  grid-row: 1;
+  grid-column: 1;
+}
+#cell-12 {
+  grid-row: 1;
+  grid-column: 2;
+}
+#cell-13 {
+  grid-row: 1;
+  grid-column: 3;
+}
+#cell-14 {
+  grid-row: 1;
+  grid-column: 4;
+}
+#cell-15 {
+  grid-row: 1;
+  grid-column: 5;
+}
+
+#cell-21 {
+  grid-row: 2;
+  grid-column: 1;
+  font-size: 5px;
+  font-weight: lighter;
+}
+#cell-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#cell-23 {
+  grid-row: 2;
+  grid-column: 3;
+}
+#cell-24 {
+  grid-row: 2 / span 3;
+  grid-column: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cell-25 {
+  grid-row: 2 / span 3;
+  grid-column: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cell-31 {
+  grid-row: 3;
+  grid-column: 1;
+}
+#cell-32 {
+  grid-row: 3;
+  grid-column: 2;
+}
+#cell-33 {
+  grid-row: 3;
+  grid-column: 3;
+}
+
+#cell-41 {
+  grid-row: 4;
+  grid-column: 1;
+}
+#cell-42 {
+  grid-row: 4;
+  grid-column: 2;
+}
+#cell-43 {
+  grid-row: 4;
+  grid-column: 3;
+}
+
+/* Style for merged cells */
+.merged-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Style for input fields inside grid cells */
+.ppm-input {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  text-align: center;
+  box-sizing: border-box;
+  /* Remove default border color from input fields with class 'ppm-input' */
+  border: none; /* Removes default border */
+  outline: none; /* Removes the blue border when focused */
+}
+
+/* Optional: Change border color when focused */
+.ppm-input:focus {
+  border-bottom: 2px solid #007bff; /* Blue underline when selected */
+}
+
+/* Container for row 6 (User-Input Section row 6) */
+#user-input-row-content-row6 {
+  display: grid;
+  grid-template-columns: 0fr 22fr 10fr 22fr 10fr 22fr 0fr;
+  width: calc(100% - 20px);
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 2px;
+}
+
+/* Adjusting button positions */
+#btn-submit {
+  grid-column: 2;
+}
+#btn-clear {
+  grid-column: 4;
+}
+#btn-add-new-entry {
+  grid-column: 6;
+}
+
+/* Style for all buttons */
+.action-button {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px; /* Keeping the original border-radius */
+  border: 2px solid transparent;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  /*text-transform: uppercase;*/
+  color: black; /* Keeping text black */
+}
+
+/* Hover Effects for Buttons */
+.action-button:hover {
+  transform: scale(1.08); /* Slight enlargement */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger glow effect */
+  border: 2px solid black; /* Black border on hover */
+}
+
+/* Active (Pressed) Effect */
+.action-button:active {
+  transform: scale(0.96); /* Press-down effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit Button: Light Coral Gradient */
+#btn-submit {
+  background: linear-gradient(45deg, #ff7f7f, #ff4c4c);
+}
+#btn-submit:hover {
+  background: linear-gradient(45deg, #ff4c4c, #ff0000);
+}
+
+/* Clear Button: Light Green Gradient */
+#btn-clear {
+  background: linear-gradient(45deg, #90ee90, #32cd32);
+}
+#btn-clear:hover {
+  background: linear-gradient(45deg, #32cd32, #228b22);
+}
+
+/* Add New Entry Button: Light Blue Gradient */
+#btn-add-new-entry {
+  background: linear-gradient(45deg, #87cefa, #4682b4);
+}
+#btn-add-new-entry:hover {
+  background: linear-gradient(45deg, #4682b4, #1e90ff);
+}
+
+/*Clear Button Functionality*/
+/* Ensure Modals are Hidden Initially */
+.modal-clear-duval,
+.modal-clear-Duval-Success {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box Design */
+.modal-content-clear-duval,
+.modal-content-clear-Duval-Success {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 370px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn-clear-duval 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Modal Icons */
+.modal-icon-clear-duval,
+.modal-icon-clear-Duval-Success {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Modal Buttons */
+.modal-buttons-clear-duval,
+.modal-buttons-clear-Duval-Success {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.btn-confirm-clear-duval,
+.btn-cancel-clear-duval,
+.btn-confirm-clear-Duval-Success,
+.btn-cancel-clear-Duval-Success {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Confirmation Button (Yes) */
+.btn-confirm-clear-duval,
+.btn-confirm-clear-Duval-Success {
+  background-color: #d9534f;
+  color: white;
+}
+
+.btn-confirm-clear-duval:hover,
+.btn-confirm-clear-Duval-Success:hover {
+  background-color: #c9302c;
+  transform: scale(1.05);
+}
+
+/* Cancel Button (No) */
+.btn-cancel-clear-duval,
+.btn-cancel-clear-Duval-Success {
+  background-color: #5bc0de;
+  color: white;
+}
+
+.btn-cancel-clear-duval:hover,
+.btn-cancel-clear-Duval-Success:hover {
+  background-color: #31b0d5;
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn-clear-duval {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal CSS appaered when viewDiagnostic is click*/
+
+/* Modal is hidden by default */
+.modal-viewDiagnostic-Modal {
+  display: none; /* Hidden until btn-submit is clicked */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-viewDiagnostic-Modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInModal-viewDiagnostic-Modal 0.3s ease-in-out;
+}
+
+.modal-title-viewDiagnostic-Modal {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-text-viewDiagnostic-Modal {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.modal-buttons-viewDiagnostic-Modal {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-button-viewDiagnostic-Modal {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.yes-button-viewDiagnostic-Modal {
+  background: #28a745;
+  color: white;
+}
+
+.yes-button-viewDiagnostic-Modal:hover {
+  background: #218838;
+}
+
+.no-button-viewDiagnostic-Modal {
+  background: #dc3545;
+  color: white;
+}
+
+.no-button-viewDiagnostic-Modal:hover {
+  background: #c82333;
+}
+
+@keyframes fadeInModal-viewDiagnostic-Modal {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
