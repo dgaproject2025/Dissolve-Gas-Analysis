@@ -1,0 +1,1886 @@
+/* Full body settings */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebecf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 1fr 7fr 1fr 50fr 1fr 5fr 1fr;
+  grid-template-columns: 1fr 50fr 1fr;
+}
+
+/* Applying border to header and form containers */
+#cell-42 {
+  border: 2px solid black;
+  border-radius: 5px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+#cell-22,
+#cell-62 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+  background: #e0e0e0;
+  border: 2px solid black;
+}
+
+/* Assigning cells to specific rows and columns */
+#cell-22 {
+  grid-row: 2;
+  grid-column: 2;
+  border: 2px solid black;
+}
+#cell-42 {
+  grid-row: 4;
+  grid-column: 2;
+}
+
+#cell-62 {
+  grid-row: 6;
+  grid-column: 2;
+}
+
+/* Styling header and form containers */
+.header-container {
+  background-color: #dde1e7;
+}
+
+#cell-42 {
+  background-color: #ffffff;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 1fr 5fr 1fr 5fr 1fr 5fr 1fr 5fr 1fr 5fr 1fr 5fr 1fr;
+  grid-template-columns: 1fr 40fr 1fr 40fr 1fr 40fr 1fr;
+}
+
+#form-container-cell-22 {
+  grid-row: 2;
+  grid-column: 2;
+  border: 1px solid black;
+}
+#form-container-cell-24 {
+  grid-row: 2;
+  grid-column: 4;
+  border: 1px solid black;
+}
+#form-container-cell-26 {
+  grid-row: 2;
+  grid-column: 6;
+  border: 1px solid black;
+}
+
+#form-container-cell-42 {
+  grid-row: 4;
+  grid-column: 2;
+  border: 1px solid black;
+}
+#form-container-cell-44 {
+  grid-row: 4;
+  grid-column: 4;
+  border: 1px solid black;
+}
+#form-container-cell-46 {
+  grid-row: 4;
+  grid-column: 6;
+  border: 1px solid black;
+}
+
+#form-container-cell-62 {
+  grid-row: 6;
+  grid-column: 2;
+  border: 1px solid black;
+}
+#form-container-cell-64 {
+  grid-row: 6;
+  grid-column: 4;
+  border: 1px solid black;
+}
+#form-container-cell-66 {
+  grid-row: 6;
+  grid-column: 6;
+  border: 1px solid black;
+}
+
+#form-container-cell-82 {
+  grid-row: 8;
+  grid-column: 2;
+  border: 1px solid black;
+}
+#form-container-cell-84 {
+  grid-row: 8;
+  grid-column: 4;
+  border: 1px solid black;
+}
+#form-container-cell-86 {
+  grid-row: 8;
+  grid-column: 6;
+  border: 1px solid black;
+}
+
+#form-container-cell-102 {
+  grid-row: 10;
+  grid-column: 2;
+  border: 1px solid black;
+}
+#form-container-cell-104 {
+  grid-row: 10;
+  grid-column: 4;
+  border: 1px solid black;
+}
+#form-container-cell-106 {
+  grid-row: 10;
+  grid-column: 6;
+  border: 1px solid black;
+}
+
+#form-container-cell-122 {
+  grid-row: 12;
+  grid-column: 2;
+  border: 1px solid black;
+}
+#form-container-cell-124 {
+  grid-row: 12;
+  grid-column: 4;
+  border: 1px solid black;
+}
+#form-container-cell-126 {
+  grid-row: 12;
+  grid-column: 6;
+  border: 1px solid black;
+}
+
+/*  This section shall contain design of each cell of form Container 42*/
+/* Section-1:: Styling for the grid inside cell 22-Current Date of form-container-42 */
+.inner-grid-42-22 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-22 {
+  background-color: #f8f9fa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-22-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-22-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-22 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-22 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-22-22,
+#inner-cell-42-22-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section-2:: Styling for the grid inside cell 24-Sample Time of form-container-42 */
+.inner-grid-42-24 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-24 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-24-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-24-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-24 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-24 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-24-22,
+#inner-cell-42-24-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the Sample Time input */
+#userInputSampleTime {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-left: 2px solid #007bff;
+  cursor: pointer;
+}
+
+/* Styling for the time picker dropdown container */
+.time-dropdown-container {
+  display: none;
+  position: absolute;
+  width: auto;
+  z-index: 10;
+}
+
+/* Styling for the time input (clock picker) */
+#timePicker {
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+/* Show the time picker when user clicks on input */
+#timePicker:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section-3:: Styling for the grid inside cell 26-Sample Date of form-container-42 */
+.inner-grid-42-26 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-26 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-26-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-26-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-26 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-26 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-26-22,
+#inner-cell-42-26-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the Sample Date input */
+#userInputSampleDate {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-left: 2px solid #007bff;
+  cursor: pointer;
+}
+
+/* Styling for the date picker dropdown container */
+.date-dropdown-container {
+  display: none;
+  position: absolute;
+  width: auto;
+  z-index: 10;
+}
+
+/* Styling for the date input (calendar picker) */
+#datePicker {
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+/* Show the date picker when user clicks on input */
+#datePicker:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section-4:: Styling for the grid inside cell 42-Equipment Type of form-container-42 */
+.inner-grid-42-42 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-42 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-42-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-42-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-42 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-42 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-42-22,
+#inner-cell-42-42-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-42-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Styling for the Equipment Input Field */
+#userInputEquipmentType {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  /*border-right: 2px solid #007BFF; /* Keeps only the right border */
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Hide the dropdown initially */
+.dropdown-container {
+  display: none;
+  position: absolute;
+  width: 15%;
+  height: 8%;
+  z-index: 10;
+}
+
+/* Styling for Equipment Dropdown */
+#equipmentDropdown {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#equipmentDropdown:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Show the dropdown when focused */
+#equipmentDropdown:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section-5:: Styling for the grid inside cell 44-Equipment of form-container-42 */
+
+.inner-grid-42-44 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-44 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-44-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-44-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-44 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-44 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-44-22,
+#inner-cell-42-44-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-44-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Styling for the Equipment Input Field */
+#userInputEquipment {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  /*border-right: 2px solid #007BFF; /* Keeps only the right border */
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Hide the dropdown initially */
+.dropdown-container-42-44 {
+  display: none;
+  position: absolute;
+  width: 15%;
+  height: 8%;
+  z-index: 10;
+}
+
+/* Styling for Equipment Dropdown */
+#equipmentDropdown-42-44 {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#equipmentDropdown42-44:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Show the dropdown when focused */
+#equipmentDropdown-42-44:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section-6:: Styling for the grid inside cell 44-Equipment Location of form-container-42 */
+
+.inner-grid-42-46 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-46 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-46-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-46-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-46 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-46 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-46-22,
+#inner-cell-42-46-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-46-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Styling for the Equipment Input Field */
+#userInputLocation {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  /*border-right: 2px solid #007BFF; /* Keeps only the right border */
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Hide the dropdown initially */
+.dropdown-container-42-46 {
+  display: none;
+  position: absolute;
+  width: 15%;
+  height: 8%;
+  z-index: 10;
+}
+
+/* Styling for Equipment Dropdown */
+#equipmentDropdown-42-46 {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#equipmentDropdown42-46:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Show the dropdown when focused */
+#equipmentDropdown-42-46:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section-7:: Styling for the grid inside cell 62-Equipment Id of form-container-42 */
+
+.inner-grid-42-62 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-62 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-62-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-62-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-62 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-62 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-62-22,
+#inner-cell-42-62-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-62-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Styling for the Equipment Input Field */
+#userInputEquipmentId {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  /*border-right: 2px solid #007BFF; /* Keeps only the right border */
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Hide the dropdown initially */
+.dropdown-container-42-62 {
+  display: none;
+  position: absolute;
+  width: 15%;
+  height: 8%;
+  z-index: 10;
+}
+
+/* Styling for Equipment Dropdown */
+#equipmentDropdown-42-62 {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#equipmentDropdown42-62:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Show the dropdown when focused */
+#equipmentDropdown-42-62:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section-8:: Styling for the grid inside cell 64-Sample Location of form-container-42 */
+
+.inner-grid-42-64 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-64 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-64-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-64-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-64 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-64 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-64-22,
+#inner-cell-42-64-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-64-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Styling for the Equipment Input Field */
+#sampleLocation {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  /*border-right: 2px solid #007BFF; /* Keeps only the right border */
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Hide the dropdown initially */
+.dropdown-container-42-64 {
+  display: none;
+  position: absolute;
+  width: 15%;
+  height: 8%;
+  z-index: 10;
+}
+
+/* Styling for Equipment Dropdown */
+#equipmentDropdown-42-64 {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#equipmentDropdown42-64:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Show the dropdown when focused */
+#equipmentDropdown-42-64:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section-9:: Styling for the grid inside cell 66-Tested By of form-container-42 */
+
+.inner-grid-42-66 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-66 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-66-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-66-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-66 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-66 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-66-22,
+#inner-cell-42-64-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-66-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Styling for the Equipment Input Field */
+#testedBy {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  /*border-right: 2px solid #007BFF; /* Keeps only the right border */
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Hide the dropdown initially */
+.dropdown-container-42-66 {
+  display: none;
+  position: absolute;
+  width: 15%;
+  height: 8%;
+  z-index: 10;
+}
+
+/* Styling for Equipment Dropdown */
+#equipmentDropdown-42-66 {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#equipmentDropdown42-66:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Show the dropdown when focused */
+#equipmentDropdown-42-66:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Section-10:: Styling for the grid inside cell 82-Oxygen of form-container-42 */
+
+.inner-grid-42-82 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-82 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-82-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-82-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-82 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-82 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-82-22,
+#inner-cell-42-82-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-82-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Section-11:: Styling for the grid inside cell 82-Hydrogen of form-container-42 */
+
+.inner-grid-42-84 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-84 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-84-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-84-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-84 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-84 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-84-22,
+#inner-cell-42-84-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-84-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Section-12:: Styling for the grid inside cell 86-Nitrogen of form-container-42 */
+
+.inner-grid-42-86 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-86 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-86-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-86-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-86 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-86 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-86-22,
+#inner-cell-42-86-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-86-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Section-13:: Styling for the grid inside cell 102-Methane  of form-container-42 */
+
+.inner-grid-42-102 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-102 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-102-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-102-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-102 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-102 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-102-22,
+#inner-cell-42-86-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-102-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Section-14:: Styling for the grid inside cell 104-Ethylene of form-container-42 */
+
+.inner-grid-42-104 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-104 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-104-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-104-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-104 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-104 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-104-22,
+#inner-cell-42-104-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-104-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Section-12:: Styling for the grid inside cell 106-Ethane of form-container-42 */
+
+.inner-grid-42-106 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-106 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-106-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-106-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-106 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-106 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-106-22,
+#inner-cell-42-106-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-106-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Section-12:: Styling for the grid inside cell 122-Acetylene of form-container-42 */
+
+.inner-grid-42-122 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-122 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-122-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-122-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-122 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-122 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-122-22,
+#inner-cell-42-122-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-122-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Section-12:: Styling for the grid inside cell 124-carbonMonoxide of form-container-42 */
+
+.inner-grid-42-124 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-124 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-124-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-124-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-124 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-124 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-124-22,
+#inner-cell-42-124-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-124-22 {
+  border-right: 2px solid #007bff;
+}
+
+/* Section-12:: Styling for the grid inside cell 126-carbonDioxide of form-container-42 */
+
+.inner-grid-42-126 {
+  display: grid;
+  grid-template-rows: 1fr 1000fr 1fr;
+  grid-template-columns: 1fr 80fr 0fr 150fr 1fr;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+/* Styling for inner grid cells */
+.inner-cell-42-126 {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#inner-cell-42-126-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#inner-cell-42-126-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+/* Styling for Label & Input fields */
+.inner-cell-42-126 label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inner-cell-42-126 input {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: none;
+  outline: none; /* Removes focus outline */
+  background-color: transparent; /* Optional: Makes the background transparent */
+  border-left: 2px solid #007bff;
+}
+
+/* Specific cell settings */
+#inner-cell-42-126-22,
+#inner-cell-42-126-24 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inner-cell-42-126-22 {
+  border-right: 2px solid #007bff;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.input-error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.input-error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+/***********************************************************************************/
+#cell-62 {
+  background-color: #ffffff;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 40fr 1fr 40fr 1fr 40fr 1fr;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#form-container-cell-62-22 {
+  grid-row: 2;
+  grid-column: 2;
+}
+#form-container-cell-62-24 {
+  grid-row: 2;
+  grid-column: 4;
+}
+#form-container-cell-62-26 {
+  grid-row: 2;
+  grid-column: 6;
+}
+
+/* Styling for the Submit Button */
+#submitButton {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitButton:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the Clear Button */
+#ClearButton {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #b3e898;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#ClearButton:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the Clear Button */
+#ViewDiagnosticButton {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #f26666;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#ViewDiagnosticButton:hover {
+  background-color: #0056b3;
+}
+/***************************************************************************************/
+/*CSS for Validation Pop Up Message"
+
+/* Modal Background */
+#validationModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Box */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  width: 50%;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+#closeModal {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#closeModal:hover {
+  background: darkred;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*CSS for Clear Confirmation Modal*/
+
+/* Modal Background */
+#confirmationModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Confirmation Modal Box */
+.confirmation-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 50%;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Buttons for claer Confirmation */
+#confirmYes,
+#confirmNo {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#confirmYes {
+  background: green;
+  color: white;
+}
+
+#confirmNo {
+  background: red;
+  color: white;
+}
+
+#confirmYes:hover {
+  background: darkgreen;
+}
+
+#confirmNo:hover {
+  background: darkred;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

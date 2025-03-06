@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Input Form</title>
+    <link rel="stylesheet" href="UserInputForm.css" />
+  </head>
+  <body class="card">
+    <div class="grid-container">
+      <!-- Creating grid cells -->
+
+      <div class="grid-item header-container" id="cell-22">
+        User Input Form - DGA Analysis
+      </div>
+
+      <div class="grid-item form-container" id="cell-42">
+        <!--Current Date-->
+        <div id="form-container-cell-22" class="form-container-cell">
+          <div class="inner-grid-42-22">
+            <!-- Row 2 - Label and Input in 22 & 24 -->
+            <div class="inner-cell-42-22" id="inner-cell-42-22-22">
+              <label for="inputField1">Current Date</label>
+            </div>
+            <div class="inner-cell-42-22" id="inner-cell-42-22-24">
+              <input
+                type="text"
+                id="userInputDateCurrentTime"
+                placeholder="DD-MM-YYYY"
+              />
+            </div>
+          </div>
+        </div>
+        <!--Sample Time-->
+        <div id="form-container-cell-24" class="form-container-cell">
+          <div class="inner-grid-42-24">
+            <div class="inner-cell-42-24" id="inner-cell-42-24-22">
+              <label for="inputField1">Sample Time</label>
+            </div>
+            <div class="inner-cell-42-24" id="inner-cell-42-24-24">
+              <!--<input type="text" id="userInputSampleTime" placeholder="Enter Sample Time">-->
+              <input
+                type="text"
+                id="userInputSampleTime"
+                placeholder="HH:MM:SS"
+                readonly
+              />
+              <div class="time-dropdown-container">
+                <input type="time" id="timePicker" step="1" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sample Date-->
+        <div id="form-container-cell-26" class="form-container-cell">
+          <div class="inner-grid-42-26">
+            <div class="inner-cell-42-26" id="inner-cell-42-26-22">
+              <label for="inputField1">Sample Date</label>
+            </div>
+            <div class="inner-cell-42-26" id="inner-cell-42-26-24">
+              <input
+                type="text"
+                id="userInputSampleDate"
+                placeholder="DD-MM-YYYY"
+                readonly
+              />
+              <div class="date-dropdown-container">
+                <input type="date" id="datePicker" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Equipment Type-->
+        <div id="form-container-cell-42" class="form-container-cell">
+          <div class="inner-grid-42-42">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-42" id="inner-cell-42-42-22">
+              <label for="equipmentType">Equipment Type</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-42" id="inner-cell-42-42-24">
+              <input
+                type="text"
+                id="userInputEquipmentType"
+                placeholder="Select Type"
+              />
+              <div class="dropdown-container">
+                <select id="equipmentDropdown" size="2">
+                  <option value="Transformer">Transformer</option>
+                  <option value="Reactor">Reactor</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Equipment -->
+        <div id="form-container-cell-44" class="form-container-cell">
+          <div class="inner-grid-42-44">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-44" id="inner-cell-42-44-22">
+              <label for="equipment">Equipment</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-44" id="inner-cell-42-44-24">
+              <input
+                type="text"
+                id="userInputEquipment"
+                placeholder="Select Equipment"
+              />
+              <div class="dropdown-container-42-44">
+                <select id="equipmentDropdown-42-44" size="2">
+                  <option value="GT-R Phase" class="GT">GT-R Phase</option>
+                  <option value="GT-Y Phase" class="GT">GT-Y Phase</option>
+                  <option value="GT-B Phase" class="GT">GT-B Phase</option>
+                  <option value="Bus-Reactor " class="REACTOR">
+                    Bus-Reactor
+                  </option>
+                  <option value="Bachau-1 Reactor " class="REACTOR">
+                    Bachau-1 Reactor
+                  </option>
+                  <option value="Bachau-2 Reactor " class="REACTOR">
+                    Bachau-2 Reactor
+                  </option>
+                  <option value="Bachau-3 Reactor" class="REACTOR">
+                    Bachau-3 Reactor
+                  </option>
+                  <option value="Bachau-4 Reactor" class="REACTOR">
+                    Bachau-4 Reactor
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Unit-->
+        <div id="form-container-cell-46" class="form-container-cell">
+          <div class="inner-grid-42-46">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-46" id="inner-cell-42-46-22">
+              <label for="equipment">Location</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-46" id="inner-cell-42-46-24">
+              <input
+                type="text"
+                id="userInputLocation"
+                placeholder="Select Location"
+              />
+              <div class="dropdown-container-42-46">
+                <select id="equipmentDropdown-42-46" size="2">
+                  <option value="Unit-10" class="Unit">Unit-10</option>
+                  <option value="Unit-20" class="Unit">Unit-20</option>
+                  <option value="Unit-30" class="Unit">Unit-30</option>
+                  <option value="Unit-40" class="Unit">Unit-40</option>
+                  <option value="Unit-50" class="Unit">Unit-50</option>
+                  <option value="Switchyard" class="Switchyard">
+                    Switchyard
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Equipmenet Id-->
+        <div id="form-container-cell-62" class="form-container-cell">
+          <div class="inner-grid-42-62">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-62" id="inner-cell-42-62-22">
+              <label for="equipment">Equipment Id.</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-62" id="inner-cell-42-62-24">
+              <input
+                type="text"
+                id="userInputEquipmentId"
+                placeholder="Select Equipment Id"
+              />
+              <div class="dropdown-container-42-62">
+                <select id="equipmentDropdown-42-62" size="2">
+                  <option value="10-T-R" class="Tr">10-T-R</option>
+                  <option value="10-T-Y" class="Tr">10-T-Y</option>
+                  <option value="10-T-B" class="Tr">10-T-B</option>
+                  <option value="20-T-R" class="Tr">10-T-R</option>
+                  <option value="20-T-Y" class="Tr">10-T-Y</option>
+                  <option value="20-T-B" class="Tr">10-T-B</option>
+                  <option value="30-T-R" class="Tr">10-T-R</option>
+                  <option value="30-T-Y" class="Tr">10-T-Y</option>
+                  <option value="30-T-B" class="Tr">10-T-B</option>
+                  <option value="40-T-R" class="Tr">10-T-R</option>
+                  <option value="40-T-Y" class="Tr">10-T-Y</option>
+                  <option value="40-T-B" class="Tr">10-T-B</option>
+                  <option value="50-T-R" class="Tr">10-T-R</option>
+                  <option value="50-T-Y" class="Tr">10-T-Y</option>
+                  <option value="50-T-B" class="Tr">10-T-B</option>
+                  <option value="Swyd-Bus-Reactor" class="React">
+                    Swyd-Bus-Reactor
+                  </option>
+                  <option value="Swyd-Bachau1-Reactor" class="React">
+                    Swyd-Bachau1-Reactor
+                  </option>
+                  <option value="Swyd-Bachau-2-Reactor" class="React">
+                    Swyd-Bachau2-Reactor
+                  </option>
+                  <option value="Swyd-Bachau-3-Reactor" class="React">
+                    Swyd-Bachau3-Reactor
+                  </option>
+                  <option value="Swyd-Bachau-4-Reactor" class="React">
+                    Swyd-Bachau4-Reactor
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sample Location-->
+        <div id="form-container-cell-64" class="form-container-cell">
+          <div class="inner-grid-42-64">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-64" id="inner-cell-42-64-22">
+              <label for="SampleLocation">Sample Location</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-64" id="inner-cell-42-64-24">
+              <input
+                type="text"
+                id="sampleLocation"
+                placeholder="Sample Location "
+                readonly
+              />
+              <div class="dropdown-container-42-64">
+                <select id="equipmentDropdown-42-64" size="2">
+                  <option value="Bottom">Bottom</option>
+                  <option value="Top">Top</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Tested By-->
+        <div id="form-container-cell-66" class="form-container-cell">
+          <div class="inner-grid-42-66">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-66" id="inner-cell-42-66-22">
+              <label for="testedBy">Tested By</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-66" id="inner-cell-42-66-24">
+              <input
+                type="text"
+                id="testedBy"
+                placeholder="Tested By "
+                readonly
+              />
+              <div class="dropdown-container-42-66">
+                <select id="equipmentDropdown-42-66" size="2">
+                  <option value="ERDA">ERDA</option>
+                  <option value="Chemical Lab">Chemical Lab</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Oxygen(O2)-->
+        <div id="form-container-cell-82" class="form-container-cell">
+          <div class="inner-grid-42-82">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-82" id="inner-cell-42-82-22">
+              <label for="Oxygen">Oxygen(O<sub>2</sub>)</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-82" id="inner-cell-42-82-24">
+              <input type="text" id="Oxygen" placeholder=" " />
+            </div>
+          </div>
+        </div>
+        <!--Hydrogen(H2)-->
+        <div id="form-container-cell-84" class="form-container-cell">
+          <div class="inner-grid-42-84">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-84" id="inner-cell-42-84-22">
+              <label for="Oxygen">Hydrogen(H<sub>2</sub>)</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-84" id="inner-cell-42-84-24">
+              <input type="text" id="Hydrogen" placeholder=" " />
+            </div>
+          </div>
+        </div>
+        <!--Nitrogen-->
+        <div id="form-container-cell-86" class="form-container-cell">
+          <div class="inner-grid-42-86">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-86" id="inner-cell-42-86-22">
+              <label for="Nitrogen">Nitrogen(N<sub>2</sub>)</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-86" id="inner-cell-42-86-24">
+              <input type="text" id="Nitrogen" placeholder=" " />
+            </div>
+          </div>
+        </div>
+        <!--Methane(CH4)-->
+        <div id="form-container-cell-102" class="form-container-cell">
+          <div class="inner-grid-42-102">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-102" id="inner-cell-42-102-22">
+              <label for="Methane">Methane(CH<sub>4</sub>)</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-102" id="inner-cell-42-102-24">
+              <input type="text" id="Methane" placeholder=" " />
+            </div>
+          </div>
+        </div>
+        <!--Ethylene(C2H4)-->
+        <div id="form-container-cell-104" class="form-container-cell">
+          <div class="inner-grid-42-104">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-104" id="inner-cell-42-104-22">
+              <label for="Etylene">Ethylene(C<sub>2</sub>H<sub>4</sub>)</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-104" id="inner-cell-42-104-24">
+              <input type="text" id="Ethylene" placeholder=" " />
+            </div>
+          </div>
+        </div>
+        <!--Acetylene(C2H2)-->
+        <div id="form-container-cell-106" class="form-container-cell">
+          <div class="inner-grid-42-106">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-106" id="inner-cell-42-106-22">
+              <label for="Acetylene"
+                >Acetylene(C<sub>2</sub>H<sub>2</sub>)</label
+              >
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-106" id="inner-cell-42-106-24">
+              <input type="text" id="Acetylene" placeholder=" " />
+            </div>
+          </div>
+        </div>
+        <!--Ethane -->
+        <div id="form-container-cell-122" class="form-container-cell">
+          <div class="inner-grid-42-122">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-122" id="inner-cell-42-122-22">
+              <label for="Acetylene"
+                >Acetylene(C<sub>2</sub>H<sub>6</sub>)</label
+              >
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-122" id="inner-cell-42-122-24">
+              <input type="text" id="Ethane" placeholder=" " />
+            </div>
+          </div>
+        </div>
+        <!--Carbon Monoxide-->
+        <div id="form-container-cell-124" class="form-container-cell">
+          <div class="inner-grid-42-124">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-124" id="inner-cell-42-124-22">
+              <label for="CarbonMonoxide">Carbon Monoxide(CO)</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-124" id="inner-cell-42-124-24">
+              <input type="text" id="CarbonMonoxide" placeholder=" " />
+            </div>
+          </div>
+        </div>
+        <!--Carbon Di-Oxide -->
+        <div id="form-container-cell-126" class="form-container-cell">
+          <div class="inner-grid-42-126">
+            <!-- Label for Equipment Type -->
+            <div class="inner-cell-42-126" id="inner-cell-42-126-22">
+              <label for="Carbon-dioxide">Carbon-dioxide(CO<sub>2</sub>)</label>
+            </div>
+
+            <!-- Dropdown for Equipment Selection (Hidden by Default) -->
+            <div class="inner-cell-42-126" id="inner-cell-42-126-24">
+              <input type="text" id="CarbonDioxide" placeholder=" " />
+            </div>
+          </div>
+        </div>
+
+        <!-- Button Section -->
+        <!--Submit Button-->
+        <!--<div id="form-container-cell-142" class="form-container-cell">
+            <button id="submitButton">Submit</button>
+          </div>-->
+        <!--Clear Button-->
+        <!--<div id="form-container-cell-144" class="form-container-cell">
+            <button id="ClearButton">Clear</button>
+          </div>-->
+
+        <!--View Diagnostic Button-->
+        <!--<div id="form-container-cell-146" class="form-container-cell">
+            <button id="ViewDiagnosticButton">View Diagnostic</button>
+          </div>-->
+      </div>
+
+      <div class="button-container" id="cell-62">
+        <!--Submit Button-->
+        <div id="form-container-cell-62-22" class="form-container-cell">
+          <button id="submitButton">Submit</button>
+        </div>
+        <!--Clear Button-->
+        <div id="form-container-cell-62-24" class="form-container-cell">
+          <button id="ClearButton">Clear</button>
+        </div>
+        <!--View Diagnostic Button-->
+        <div id="form-container-cell-62-26" class="form-container-cell">
+          <button id="ViewDiagnosticButton">View Diagnostic</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Validation Modal Pop-up -->
+    <div id="validationModal">
+      <div class="modal-content">
+        <p id="modalMessage"></p>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+
+    <!-- Clear Confirmation Modal Pop-up -->
+    <div id="confirmationModal">
+      <div class="confirmation-content">
+        <p id="confirmationMessage"></p>
+        <button id="confirmYes">Yes</button>
+        <button id="confirmNo">No</button>
+      </div>
+    </div>
+
+    <script src="UserInputForm.js"></script>
+  </body>
+</html>
